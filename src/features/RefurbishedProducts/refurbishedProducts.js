@@ -18,7 +18,6 @@ export const fetchRefurbishedData = createAsyncThunk('refurbishedLaptops/fetchRe
 
 export const filterRefurbishedData = createAsyncThunk('refurbishedLaptops/filterRefurbishedData', async (filterArray) => {
     const response = await axios.post("https://major-backend-sc1v.onrender.com/refurbishedlaptop/filter", { filter: filterArray })
-    console.log(response)
     if (response.data.message === 'FILTER_SUCCESS') {
         return response.data.details;
     }

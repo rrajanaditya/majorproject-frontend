@@ -38,10 +38,6 @@ const Products = () => {
       }
     })
   }
-  console.log(refurbishedLaptopStore)
-  function onChangeValue(event) {
-    console.log(event.target.value);
-  }
   useEffect(() => {
     if (selectedOption === "new") {
       dispatch(filterNewLaptopData(filter));
