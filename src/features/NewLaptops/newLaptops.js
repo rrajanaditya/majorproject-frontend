@@ -10,14 +10,14 @@ const initialState = {
 
 export const fetchNewData = createAsyncThunk('newLaptops/fetchNewData', async () => {
 
-    const response = await axios.get("http://localhost:5000/newlaptop/all")
+    const response = await axios.get("https://major-backend-sc1v.onrender.com/newlaptop/all")
     if (response.data.message === 'FETCH_SUCCESS') {
         return response.data.details;
     }
 })
 
 export const filterNewLaptopData = createAsyncThunk('newLaptops/filterNewLaptopData', async (filterArray) => {
-    const response = await axios.post("http://localhost:5000/newlaptop/filter", { filter: filterArray })
+    const response = await axios.post("https://major-backend-sc1v.onrender.com/newlaptop/filter", { filter: filterArray })
     if (response.data.message === 'FILTER_SUCCESS') {
         return response.data.details;
     }
