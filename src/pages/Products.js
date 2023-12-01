@@ -57,7 +57,7 @@ const Products = () => {
       </h2>
       <span className="mr-4 text-lg font-semibold">Filters:</span>
       <div className="filter-section mb-6 flex flex-col flex-wrap text-xs">
-        <div className="flex ml-3" onChange={onChangeValue}>
+        <div className="flex ml-3">
           <input type="radio" checked={selectedOption === "refurbished" ? true : false} onChange={() => { setSelectedOption("refurbished") }} name="refurbished" className="mr-1" />
           <label htmlFor="refurbished" className="mr-2">Refurbished</label>
           <input type="radio" checked={selectedOption === "new" ? true : false} onChange={() => { setSelectedOption("new") }} name="new" className="mr-1" />
